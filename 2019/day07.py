@@ -3,7 +3,7 @@ import itertools
 import copy
 
 
-with open('input.csv', 'r') as f:
+with open('../input.csv', 'r') as f:
     reader = csv.reader(f)
     array = list(reader)[0]
 

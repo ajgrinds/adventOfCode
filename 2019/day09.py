@@ -33,7 +33,7 @@ def get_index(values, i, mode, base):
 
 
 def calc(system_id):
-    with open('input.csv', 'r') as f:
+    with open('../input.csv', 'r') as f:
         reader = csv.reader(f)
         values = list(reader)[0]
 

@@ -16,7 +16,7 @@ def parse_code(code):
 
 
 def calc(system_id):
-    with open('input.csv', 'r') as f:
+    with open('../input.csv', 'r') as f:
         reader = csv.reader(f)
         values = list(reader)[0]
 

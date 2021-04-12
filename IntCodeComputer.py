@@ -38,7 +38,7 @@ class IntCodeMachine:
         if _input is None:
             self.input = []
         else:
-            self.input = _input
+            self.input = list(map(int, _input))
         self.output = []
         self.running = False
 

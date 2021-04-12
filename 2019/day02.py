@@ -3,7 +3,7 @@ from itertools import permutations
 
 
 def calc(value1, value2):
-    with open('input.csv', 'r') as f:
+    with open('../input.csv', 'r') as f:
         reader = csv.reader(f)
         values = list(reader)[0]
 
