@@ -3,8 +3,9 @@
 #include <fstream>
 #include <algorithm>
 
-int day02() {
-    int sum = 0;
+int main() {
+    int part1 = 0;
+    int part2 = 0;
 
     std::ifstream file ("input.txt");
     std::string value;
@@ -17,14 +18,14 @@ int day02() {
             lwh[i] = std::stoi(value.substr(0, pos));
             value.erase(0, pos + 1);
         }
-        sum += (2 * lwh[0] * lwh[1]) + (2 * lwh[1] * lwh[2]) + (2 * lwh[2] * lwh[0]);
-        int sums[] = {lwh[0] * lwh[1], lwh[1] * lwh[2], lwh[2] * lwh[0]};
-        sum += *std::min_element(sums, sums + sizeof(sums)/sizeof(sums[0]));
-    }
-    return sum;
-}
+        part1 += (2 * lwh[0] * lwh[1]) + (2 * lwh[1] * lwh[2]) + (2 * lwh[2] * lwh[0]);
+        int times[] = {lwh[0] * lwh[1], lwh[1] * lwh[2], lwh[2] * lwh[0]};
+        part1 += *std::min_element(times, times + sizeof(times)/sizeof(times[0]));
 
-int main() {
-    int ans = day02();
-    std::cout << ans;
+        part2 += lwh[0] * lwh[1] * lwh[2];
+        int sums[] = {lwh[0] + lwh[1], lwh[1] + lwh[2], lwh[2] + lwh[0]};
+        part2 += *std::min_element(sums, sums + sizeof(sums)/sizeof(sums[0])) * 2;
+
+    }
+    std::cout << "Part 1: " << part1 << std::endl << "Part 2: " << part2;
 }
