@@ -16,6 +16,7 @@
 # Ignore temp files
 __pycache__
 *.dSYM
+out
 
 # Ignore input files
 *.txt

@@ -3,7 +3,7 @@
 #include <fstream>
 #include <algorithm>
 
-int main() {
+void day02() {
     int part1 = 0;
     int part2 = 0;
 
