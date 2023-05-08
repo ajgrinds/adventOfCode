@@ -1,4 +1,22 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+### Above combination will ignore all files without extension ###
+
+# Ignore config files
+.vscode
+.idea
+
+# Ignore temp files
+__pycache__
+*.dSYM
+
+# Ignore input files
 *.txt
 *.csv
-.idea
-__pycache__
